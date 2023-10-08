@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_shade_1"
+        android:padding="4dp">
+
+<!--    text view for course name -->
+    <TextView
+
+            android:id="@+id/courseNameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="4dp"
+            android:text="Course Name"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+<!--    image view for course image -->
+    <ImageView
+
+            android:id="@+id/courseImgTV"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/courseNameTV"
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_launcher_background"/>
+
+<!--    text view for course desc -->
+    <TextView
+
+            android:id="@+id/courseDescTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/courseNameTV"
+            android:layout_toEndOf="@id/courseImgTV"
+            android:layout_toRightOf="@id/courseImgTV"
+            android:padding="3dp"
+            android:layout_margin="4dp"
+            android:text="Description"
+            android:textColor="@color/white"/>
+
+<!--    text view for suited for -->
+    <TextView
+
+            android:id="@+id/courseSuitedTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/courseDescTV"
+            android:layout_toRightOf="@id/courseImgTV"
+            android:padding="3dp"
+            android:layout_margin="4dp"
+            android:text="Suited For"
+            android:textColor="@color/white"/>
+
+<!--    text view for course price -->
+    <TextView
+
+            android:id="@+id/coursePriceTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/courseSuitedTV"
+            android:layout_toRightOf="@id/courseImgTV"
+            android:padding="3dp"
+            android:layout_margin="4dp"
+            android:text="Price"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+    <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coursePriceTV"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+<!--        button to edit -->
+        <Button
+
+                android:id="@+id/buttonEditTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:text="Edit Course"/>
+
+<!--        button to see course detail -->
+        <Button
+
+                android:id="@+id/buttonViewDetailTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                android:text="View Details"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

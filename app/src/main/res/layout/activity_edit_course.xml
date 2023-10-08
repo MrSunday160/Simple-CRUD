@@ -1,10 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".EditCourseActivity">
-<!--    TODO: Continue here bruh -->
+        tools:context=".EditCourseActivity"
+        android:background="@color/black_shade_1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<!--            text edit for add course name -->
+            <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textCourseName"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Enter Course Name"
+                    android:padding="5dp"
+                    app:hintTextColor="@color/white"
+                    android:textColorHint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/textEditCourseName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:inputType="textImeMultiLine|textMultiLine"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+<!--            text edit for add course price -->
+            <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textCoursePrice"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Enter Course Price"
+                    android:padding="5dp"
+                    app:hintTextColor="@color/purple_200"
+                    android:textColorHint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/textEditCoursePrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:inputType="textImeMultiLine|textMultiLine"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+<!--            text edit for add course best suited -->
+            <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textCourseSuitedFor"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Enter Course Best Suited For"
+                    android:padding="5dp"
+                    app:hintTextColor="@color/purple_200"
+                    android:textColorHint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/textEditCourseSuitedFor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:inputType="textImeMultiLine|textMultiLine"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+<!--            text edit for course img link -->
+            <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textCourseImageLink"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Enter Course Image Link"
+                    android:padding="5dp"
+                    app:hintTextColor="@color/purple_200"
+                    android:textColorHint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/textEditCourseImageLink"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:inputType="textImeMultiLine|textMultiLine"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+<!--            text edit for course desc -->
+            <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textCourseDesc"
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Enter Course Description"
+                    android:padding="5dp"
+                    app:hintTextColor="@color/purple_200"
+                    android:textColorHint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/textEditCourseDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:inputType="textImeMultiLine|textMultiLine"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+<!--                button for updating course -->
+
+                <Button
+
+                        android:id="@+id/updateCourseBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_back"
+                        android:text="Update Course"
+                        android:onClick="onUpdateBtn"/>
+
+<!--                button for delete course-->
+                <Button
+
+                        android:id="@+id/deleteCourseBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_back"
+                        android:text="Delete Course"
+                        android:onClick="onDeleteBtn"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+<!--        progress bar -->
+        <ProgressBar
+
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/progress_back"
+                android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
