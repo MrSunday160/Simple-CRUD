@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -67,7 +68,7 @@ public class AddCourseActivity extends AppCompatActivity{
         CourseRVModal courseRVModal = new CourseRVModal(courseID, courseName, courseDesc, coursePrice, courseSuited, courseImg);
 
         // call add value event to pass data into firebase db
-        databaseReference.addValueEventListener(new ValueEventListener(){
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener(){
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot){
 
@@ -75,6 +76,7 @@ public class AddCourseActivity extends AppCompatActivity{
                 databaseReference.child(courseID).setValue(courseRVModal);
                 // display toast message
                 Toast.makeText(AddCourseActivity.this, "Course added", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
                 startActivity(new Intent(AddCourseActivity.this, MainActivity.class));
 
             }
@@ -82,6 +84,8 @@ public class AddCourseActivity extends AppCompatActivity{
             public void onCancelled(@NonNull DatabaseError error){
 
                 // display error message
+                Log.e("Firebase Error", "Error: " + error.getMessage());
+                progressBar.setVisibility(View.GONE); // hide progress bar
                 Toast.makeText(AddCourseActivity.this, "Failed to add course", Toast.LENGTH_SHORT).show();
 
             }
